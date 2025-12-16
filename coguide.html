@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Co-Guide Wise Student Report</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f4f7;
+        padding: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+    select, button {
+        padding: 8px;
+        font-size: 16px;
+    }
+    button {
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: #fff;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background: #28a745;
+        color: white;
+    }
+    .count {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+</style>
+</head>
+
+<body>
+<button ><a href="search.html">Student Detial's</a></button>
+<button ><a href="guide.html">Guide Detial's</a></button>
+<button ><a href="coguide.html">Co-Guide Detial's</a></button>
+<h2>Co-Guide Wise Student Search</h2>
+
+<select id="coGuideSelect">
+    <option value="">-- Select Co-Guide Name --</option>
+</select>
+
+<button onclick="searchCoGuide()">Search</button>
+
+<div class="count" id="resultCount"></div>
+
+<table id="resultTable" style="display:none;">
+<thead>
+<tr>
+    <th>Enrollment No</th>
+    <th>Student Name</th>
+    <th>Email</th>
+    <th>Project Title</th>
+    <th>Guide</th>
+    <th>Co-Guide</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script src="ss.js"></script>
+
+</body>
+</html>

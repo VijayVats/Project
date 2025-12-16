@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Project Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef3ff;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+        .not-found {
+            color: red;
+            text-align: center;
+            margin-top: 15px;
+        }
+select, .a{
+        padding: 8px;
+        font-size: 16px;
+    }
+    .a {
+        background: #005bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-left: 5px;
+}
+    </style>
+</head>
+<body>
+
+<button class="a"><a href="guide.html">Guide Detial's</a></button>
+<button class="a"><a href="coguide.html">Co-Guide Detial's</a></button>
+<div class="container">
+    <h2>Search Student Project Details</h2>
+    <input type="text" id="enrollInput" placeholder="Enter Enrollment Number" />
+    <button onclick="searchStudent()">Search</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="studentData.js">
+   
+</script>
+
+</body>
+</html>
