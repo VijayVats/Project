@@ -612,63 +612,21 @@ function searchGuide() {
         const resultBox = document.getElementById("result");
         resultBox.innerHTML = "";
 
-        const student = students.find(s => s.enrollment === input);
+        const student = students.find(s => s.enrollment_no === input);
 
         if (student) {
             resultBox.innerHTML = `
                 <div class="result-box">
                     <p><strong>Student Name:</strong> ${student.name}</p>
-                    <p><strong>Project Title:</strong> ${student.projectTitle}</p>
+                    <p><strong>Project Title:</strong> ${student.project_title}</p>
                     <p><strong>Status:</strong> ${student.status}</p>
-                    <p><strong>Guide Name:</strong> ${student.guideName}</p>
-                    <p><strong>Guide Email:</strong> ${student.guideEmail}</p>
-                    <p><strong>Co-Guide Name:</strong> ${student.coGuideName}</p>
-                    <p><strong>Co-Guide Email:</strong> ${student.coGuideEmail}</p>
+                    <p><strong>Guide Name:</strong> ${student.guide}</p>
+                    <p><strong>Guide Email:</strong> ${student.guide_email}</p>
+                    <p><strong>Co-Guide Name:</strong> ${student.co_guide}</p>
+                    <p><strong>Co-Guide Email:</strong> ${student.co_guide_email}</p>
                 </div>
             `;
         } else {
             resultBox.innerHTML = `<p class='not-found'>No student found with this Enrollment Number!</p>`;
         }
     }
-
-// ===== POPULATE CO-GUIDE DROPDOWN =====
-const coGuideSelect = document.getElementById("coGuideSelect");
-const uniqueCoGuides = [...new Set(students.map(s => s.co_guide))];
-
-uniqueCoGuides.forEach(cg => {
-    const option = document.createElement("option");
-    option.value = cg;
-    option.textContent = cg;
-    coGuideSelect.appendChild(option);
-});
-
-// ===== SEARCH FUNCTION =====
-function searchCoGuide() {
-    const selected = coGuideSelect.value;
-    const tbody = document.querySelector("#resultTable tbody");
-    tbody.innerHTML = "";
-
-    if (!selected) {
-        alert("Please select a Co-Guide name");
-        return;
-    }
-
-    const filtered = students.filter(s => s.co_guide === selected);
-
-    document.getElementById("resultCount").innerText =
-        `Total Students under Co-Guide "${selected}": ${filtered.length}`;
-
-    filtered.forEach(s => {
-        const row = `<tr>
-            <td>${s.enrollment_no}</td>
-            <td>${s.name}</td>
-            <td>${s.email}</td>
-            <td>${s.project}</td>
-            <td>${s.guide}</td>
-            <td>${s.co_guide}</td>
-        </tr>`;
-        tbody.innerHTML += row;
-    });
-
-    document.getElementById("resultTable").style.display = "table";
-}
