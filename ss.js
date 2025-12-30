@@ -11,6 +11,17 @@
     "co_guide_email": "",
     "status": "confirm"
   },
+   {
+		 "enrollment_no": "2350592955",
+  "name": "Shaiza Salmani",
+  "email": "shaizasalmani54@gmail.com",
+  "project_title": "Personal finance and advisor",
+  "guide": "Vinay Aggarwal Sir",
+  "co_guide": "",
+  "guide_email": "vinay@cftedu.in",
+  "co_guide_email": "",
+  "status": "confirm"
+}
   {
     "enrollment_no": "2351765280",
     "name": "Mohd Areeb",
@@ -607,3 +618,4 @@ function searchCoGuide() {
 
     document.getElementById("resultTable").style.display = "table";
 }
+
