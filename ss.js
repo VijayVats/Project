@@ -21,7 +21,7 @@
   "guide_email": "vinay@cftedu.in",
   "co_guide_email": "",
   "status": "confirm"
-}
+},
   {
     "enrollment_no": "2351765280",
     "name": "Mohd Areeb",
@@ -618,4 +618,5 @@ function searchCoGuide() {
 
     document.getElementById("resultTable").style.display = "table";
 }
+
 
