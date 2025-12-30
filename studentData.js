@@ -20,7 +20,7 @@
   "guide_email": "vinay@cftedu.in",
   "co_guide_email": "",
   "status": "confirm"
-}
+},
   {
     "enrollment_no": "2351765280",
     "name": "Mohd Areeb",
@@ -641,4 +641,5 @@ function searchGuide() {
             resultBox.innerHTML = `<p class='not-found'>No student found with this Enrollment Number!</p>`;
         }
     }
+
 
